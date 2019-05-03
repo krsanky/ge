@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"os"
+
+	"github.com/gdamore/tcell"
 )
 
 func main() {
@@ -22,13 +24,14 @@ func main() {
 			edit()
 		}
 	} else {
-		usage()
+		edit()
 	}
 
 }
 
 func edit() {
-	fmt.Printf("edit...\n")
+	mycolor := tcell.ColorValues[tcell.ColorBlack]
+	fmt.Printf("edit...%v\n", mycolor)
 }
 
 func usage() {
